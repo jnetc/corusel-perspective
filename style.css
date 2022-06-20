@@ -1,0 +1,127 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+  /* --bg: hsl(201, 27%, 10%); */
+  /* --bg: hsl(0, 0%, 100%); */
+  /* --font-s: 1rem; */
+}
+
+/* @tailwind base; */
+/* @tailwind components; */
+
+/* @tailwind utilities; */
+
+/* @tailwind screens; */
+
+body {
+  /* width: min-content;
+  display: grid;
+  grid-template-columns: 300px;
+  grid-auto-rows: min-content; */
+
+  /* color: aliceblue; */
+  /* background-color: hsl(201, 27%, 10%); */
+  /* position: relative; */
+  /* padding: 1rem; */
+  /* gap: 1rem; */
+}
+
+/* EXAMPLE */
+
+body {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  background-color: #131b24;
+}
+button {
+  padding: 0.5rem 1.5rem;
+}
+
+.corusel-container {
+  padding: 30px 0;
+  height: 500px;
+  width: 900px;
+  overflow: hidden;
+  position: relative;
+  perspective: 1000px;
+  display: grid;
+  place-content: center;
+}
+
+.corusel {
+  --degree: 0deg;
+  height: 300px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  transition: all 0.3s linear;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  position: relative;
+  border: 2px solid red;
+  border-radius: 50%;
+  transform: rotateX(90deg);
+  /* transform: rotateZ(var(--degree)) rotateX(0deg); */
+}
+.corusel.perspective {
+  transform: rotateX(75deg);
+}
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100px;
+  aspect-ratio: 1 / 1;
+  transition: all 0.3s linear;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(100%, -250%) rotateX(-90deg) rotateY(calc(-1 * var(--degree)));
+}
+
+.item h1 {
+  font-size: 40px;
+  color: white;
+}
+
+.front {
+  background-color: #2c3e50;
+  z-index: 1;
+  transform: translate(100%, 50%) rotateX(-90deg) rotateY(calc(-1 * var(--degree)));
+  /* transform: translate(100%, 50%) rotateZ(calc(-1 * var(--degree))); */
+  transform-origin: center;
+}
+
+.left {
+  background-color: #3498db;
+  transform: translate(-50%, -100%) rotateX(-90deg) rotateY(calc(-1 * var(--degree)));
+  /* transform: translate(-50%, -100%) rotateZ(calc(-1 * var(--degree))); */
+  z-index: 2;
+}
+
+.back {
+  background-color: #1abc9c;
+  transform: translate(100%, -250%) rotateX(-90deg) rotateY(calc(-1 * var(--degree)));
+  /* transform: translate(100%, -250%) rotateZ(calc(-1 * var(--degree))); */
+  z-index: 1;
+}
+.right {
+  background-color: #bc681a;
+  transform: translate(250%, -100%) rotateX(-90deg) rotateY(calc(-1 * var(--degree)));
+  /* transform: translate(250%, -100%) rotateZ(calc(-1 * var(--degree))); */
+  z-index: 1;
+}
