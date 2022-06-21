@@ -9,34 +9,6 @@
     'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-:root {
-  /* --bg: hsl(201, 27%, 10%); */
-  /* --bg: hsl(0, 0%, 100%); */
-  /* --font-s: 1rem; */
-}
-
-/* @tailwind base; */
-/* @tailwind components; */
-
-/* @tailwind utilities; */
-
-/* @tailwind screens; */
-
-body {
-  /* width: min-content;
-  display: grid;
-  grid-template-columns: 300px;
-  grid-auto-rows: min-content; */
-
-  /* color: aliceblue; */
-  /* background-color: hsl(201, 27%, 10%); */
-  /* position: relative; */
-  /* padding: 1rem; */
-  /* gap: 1rem; */
-}
-
-/* EXAMPLE */
-
 body {
   overflow: hidden;
   display: flex;
@@ -55,7 +27,7 @@ button {
 .corusel-container {
   padding: 30px 0;
   height: 500px;
-  width: 900px;
+  width: max-content;
   overflow: hidden;
   position: relative;
   perspective: 1000px;
@@ -75,7 +47,6 @@ button {
   border: 2px solid red;
   border-radius: 50%;
   transform: rotateX(90deg);
-  /* transform: rotateZ(var(--degree)) rotateX(0deg); */
 }
 .corusel.perspective {
   transform: rotateX(75deg);
@@ -96,6 +67,7 @@ button {
 .item h1 {
   font-size: 40px;
   color: white;
+  user-select: none;
 }
 
 .front {
