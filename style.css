@@ -27,7 +27,7 @@ button {
 .corusel-container {
   padding: 30px 0;
   height: 500px;
-  width: max-content;
+  width: 500px;
   overflow: hidden;
   position: relative;
   perspective: 1000px;
